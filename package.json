@@ -1,0 +1,38 @@
+{
+  "name": "flarelink-verify",
+  "version": "0.1.0",
+  "description": "Verify that the Flarelink auth Worker deployed in your own Cloudflare account is the exact published, source-available bundle — byte-for-byte, using only your own CF token.",
+  "type": "module",
+  "bin": {
+    "flarelink-verify": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flarelink-dev/flarelink-verify.git"
+  },
+  "homepage": "https://github.com/flarelink-dev/flarelink-verify#readme",
+  "bugs": {
+    "url": "https://github.com/flarelink-dev/flarelink-verify/issues"
+  },
+  "keywords": [
+    "flarelink",
+    "cloudflare",
+    "workers",
+    "auth",
+    "reproducible-build",
+    "supply-chain",
+    "integrity",
+    "verify"
+  ],
+  "author": "Flarelink",
+  "dependencies": {}
+}

@@ -1,6 +1,9 @@
 {
-  "name": "flarelink-verify",
+  "name": "@flarelink/verify",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Verify that the Flarelink auth Worker deployed in your own Cloudflare account is the exact published, source-available bundle — byte-for-byte, using only your own CF token.",
   "type": "module",
   "bin": {

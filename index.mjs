@@ -43,7 +43,7 @@ function parseArgs(argv) {
 const HELP = `flarelink-verify — verify the deployed Flarelink auth Worker matches the published bundle
 
 Usage:
-  CF_API_TOKEN=<token> CF_ACCOUNT_ID=<id> npx flarelink-verify --url https://your-auth-worker.workers.dev
+  CF_API_TOKEN=<token> CF_ACCOUNT_ID=<id> npx @flarelink/verify --url https://your-auth-worker.workers.dev
 
 Options:
   --url <url>        Your auth Worker's URL (also accepted as a positional arg).

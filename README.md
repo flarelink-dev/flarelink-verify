@@ -4,7 +4,7 @@ Prove that the [Flarelink](https://flarelink.dev) auth Worker running in **your*
 
 ```bash
 CF_API_TOKEN=<token> CF_ACCOUNT_ID=<account-id> \
-  npx flarelink-verify --url https://your-auth-worker.workers.dev
+  npx @flarelink/verify --url https://your-auth-worker.workers.dev
 ```
 
 ```

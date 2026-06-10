@@ -19,7 +19,7 @@ PASS — the bundle running in your account is the published v0.3.0 bundle.
 
 ## Why
 
-Flarelink deploys an open-source auth Worker onto your own Cloudflare account and walks away. The dashboard/orchestrator that does the deploying is closed source — but it doesn't need to be trusted, because everything it *produces* in your account is verifiable. This tool closes the last gap: it proves the bytes Cloudflare is actually running for your users match the published [`auth-module`](https://github.com/flarelink-dev/auth-module) source.
+Flarelink deploys a source-available auth Worker onto your own Cloudflare account and walks away. The dashboard/orchestrator that does the deploying is closed source — but it doesn't need to be trusted, because everything it *produces* in your account is verifiable. This tool closes the last gap: it proves the bytes Cloudflare is actually running for your users match the published [`auth-module`](https://github.com/flarelink-dev/auth-module) source.
 
 The chain:
 

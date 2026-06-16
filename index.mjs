@@ -16,6 +16,7 @@
 // Exit codes: 0 PASS · 1 MISMATCH · 2 usage/IO error · 3 no published hash.
 
 import { createHash } from 'node:crypto';
+import { realpathSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
 const REPO = 'flarelink-dev/auth-module';
@@ -191,8 +192,20 @@ async function main() {
   process.exit(match ? 0 : 1);
 }
 
-// Run only when invoked as a CLI; importable for tests otherwise.
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+// Run only when invoked as a CLI; importable for tests otherwise. Resolve
+// argv[1] through realpath first: npm/npx invoke the bin via a symlink
+// (node_modules/.bin/flarelink-verify → index.mjs), and the symlink path
+// wouldn't match import.meta.url (the resolved real path) — which silently
+// skipped main() and produced no output. realpath makes both sides the same.
+function invokedAsCli() {
+  if (!process.argv[1]) return false;
+  try {
+    return import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href;
+  } catch {
+    return false;
+  }
+}
+if (invokedAsCli()) {
   main();
 }
 
